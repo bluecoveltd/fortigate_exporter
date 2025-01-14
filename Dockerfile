@@ -1,5 +1,5 @@
 # Build using the minimum supported Golang version (match go.mod)
-# docker buildx build . -t bluecove2.azurecr.io/fortigate_exporter:1.25.0
+# docker buildx build . -t bluecove2.azurecr.io/fortigate_exporter:1.25.0_1
 FROM golang:1.18 as builder
 
 WORKDIR /build
@@ -8,7 +8,7 @@ COPY . .
 RUN go get -v -t -d ./...
 RUN make build
 
-FROM scratch
+FROM alpine:3.20.0
 WORKDIR /opt/fortigate_exporter
 
 COPY --from=builder /build/target/fortigate-exporter .
