@@ -8,6 +8,8 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"os"
+	"regexp"
 	"time"
 
 	"github.com/bluecoveltd/fortigate_exporter/internal/config"
@@ -25,6 +27,18 @@ func NewFortiClient(ctx context.Context, tgt url.URL, hc *http.Client, aConfig c
 	}
 
 	if auth.Token != "" {
+
+		// Accept Environment Variable interpolation
+		var regexString = `^\$\{__(?<envVar>[\w\d_]+)\}$`
+		if envMatch, _ := regexp.MatchString(regexString, string(auth.Token)); envMatch {
+			envVarRe := regexp.MustCompile(regexString)
+			envVar := envVarRe.FindStringSubmatch(string(auth.Token))[1]
+			if os.Getenv(envVar) == "" {
+				return nil, fmt.Errorf("environment variable %s not found", envVar)
+			}
+			auth.Token = config.Token(os.Getenv(envVar))
+		}
+
 		if tgt.Scheme != "https" {
 			return nil, fmt.Errorf("FortiOS only supports token for HTTPS connections")
 		}
