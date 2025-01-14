@@ -1,4 +1,5 @@
 # Build using the minimum supported Golang version (match go.mod)
+# docker buildx build . -t bluecove2.azurecr.io/fortigate_exporter:1.25.0
 FROM golang:1.18 as builder
 
 WORKDIR /build
