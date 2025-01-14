@@ -22,7 +22,7 @@ import (
 	"log"
 	"net/url"
 
-	"github.com/bluecmd/fortigate_exporter/pkg/http"
+	"github.com/bluecoveltd/fortigate_exporter/pkg/http"
 	"github.com/google/go-jsonnet"
 	"github.com/prometheus/client_golang/prometheus"
 )

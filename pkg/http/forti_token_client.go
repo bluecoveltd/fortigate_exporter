@@ -25,7 +25,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/bluecmd/fortigate_exporter/internal/config"
+	"github.com/bluecoveltd/fortigate_exporter/internal/config"
 )
 
 type HTTPClient interface {

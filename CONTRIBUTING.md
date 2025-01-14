@@ -8,7 +8,7 @@ Fortigate exporter uses GitHub to manage reviews of pull requests.
   addressing it to @bluecmd or @secustor.
 
 * If you plan to do something more impacting, first discuss your ideas
-  in our [chat room](https://matrix.to/#/#fortigate_exporter:matrix.org) or the [discussions](https://github.com/bluecmd/fortigate_exporter/discussions/landing) page.
+  in our [chat room](https://matrix.to/#/#fortigate_exporter:matrix.org) or the [discussions](https://github.com/bluecoveltd/fortigate_exporter/discussions/landing) page.
   This will avoid unnecessary work and surely give you and us a good deal
   of inspiration.
 

@@ -1,7 +1,7 @@
 # fortigate_exporter
 
-![Go](https://github.com/bluecmd/fortigate_exporter/workflows/Go/badge.svg)
-![Docker](https://github.com/bluecmd/fortigate_exporter/workflows/Docker/badge.svg)
+![Go](https://github.com/bluecoveltd/fortigate_exporter/workflows/Go/badge.svg)
+![Docker](https://github.com/bluecoveltd/fortigate_exporter/workflows/Docker/badge.svg)
 [![Docker Repository on Quay](https://quay.io/repository/bluecmd/fortigate_exporter/status "Docker Repository on Quay")](https://quay.io/repository/bluecmd/fortigate_exporter)
 [![Matrix](https://img.shields.io/matrix/fortigate_exporter:matrix.org)](https://matrix.to/#/#fortigate_exporter:matrix.org)
 
@@ -558,11 +558,11 @@ prometheus_fortigate_exporter:
 This is a collection of known issues that for some reason cannot be fixed,
 but might be possible to work around.
 
- * Probing causing [httpsd memory leak in FortiOS 6.2.x](https://github.com/bluecmd/fortigate_exporter/issues/62) ([Workaround](https://github.com/bluecmd/fortigate_exporter/issues/62#issuecomment-798602061))
+ * Probing causing [httpsd memory leak in FortiOS 6.2.x](https://github.com/bluecoveltd/fortigate_exporter/issues/62) ([Workaround](https://github.com/bluecoveltd/fortigate_exporter/issues/62#issuecomment-798602061))
 
 ## Missing Metrics?
 
-Please [file an issue](https://github.com/bluecmd/fortigate_exporter/issues/new) describing what metrics you'd like to see.
+Please [file an issue](https://github.com/bluecoveltd/fortigate_exporter/issues/new) describing what metrics you'd like to see.
 Include as much details as possible please, e.g. how the perfect Prometheus metric would look for your use-case.
 
 An alternative to using this exporter is to use generic SNMP polling, e.g. using a Prometheus SNMP exporter

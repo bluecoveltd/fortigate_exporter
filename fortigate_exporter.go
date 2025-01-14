@@ -24,10 +24,10 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/bluecmd/fortigate_exporter/pkg/probe"
+	"github.com/bluecoveltd/fortigate_exporter/pkg/probe"
 
-	"github.com/bluecmd/fortigate_exporter/internal/config"
-	fortiHTTP "github.com/bluecmd/fortigate_exporter/pkg/http"
+	"github.com/bluecoveltd/fortigate_exporter/internal/config"
+	fortiHTTP "github.com/bluecoveltd/fortigate_exporter/pkg/http"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/bluecmd/fortigate_exporter/pkg/http"
+	"github.com/bluecoveltd/fortigate_exporter/pkg/http"
 	"github.com/prometheus/client_golang/prometheus"
 )
 
