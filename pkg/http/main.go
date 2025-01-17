@@ -29,7 +29,7 @@ func NewFortiClient(ctx context.Context, tgt url.URL, hc *http.Client, aConfig c
 	if auth.Token != "" {
 
 		// Accept Environment Variable interpolation
-		var regexString = `^\$\{__(?<envVar>[\w\d_]+)\}$`
+		var regexString = `^\$\{__([\w\d_]+)\}$`
 		if envMatch, _ := regexp.MatchString(regexString, string(auth.Token)); envMatch {
 			envVarRe := regexp.MustCompile(regexString)
 			envVar := envVarRe.FindStringSubmatch(string(auth.Token))[1]
@@ -37,6 +37,7 @@ func NewFortiClient(ctx context.Context, tgt url.URL, hc *http.Client, aConfig c
 				return nil, fmt.Errorf("environment variable %s not found", envVar)
 			}
 			auth.Token = config.Token(os.Getenv(envVar))
+			fmt.Println(auth.Token)
 		}
 
 		if tgt.Scheme != "https" {
