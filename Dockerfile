@@ -4,8 +4,9 @@ FROM golang:1.21 as builder
 
 WORKDIR /build
 
-COPY . .
+COPY go.* .
 RUN go get -v -t -d ./...
+COPY . .
 RUN make build
 
 FROM alpine:3.20.0

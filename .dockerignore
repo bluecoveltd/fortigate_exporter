@@ -1,0 +1,14 @@
+*
+
+# Project files
+!go.mod
+!go.sum
+
+# Code
+!fortigate_exporter.go
+!pkg
+!internal
+
+# Build files
+!Makefile
+!.git
