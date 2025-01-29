@@ -37,7 +37,6 @@ func NewFortiClient(ctx context.Context, tgt url.URL, hc *http.Client, aConfig c
 				return nil, fmt.Errorf("environment variable %s not found", envVar)
 			}
 			auth.Token = config.Token(os.Getenv(envVar))
-			fmt.Println(auth.Token)
 		}
 
 		if tgt.Scheme != "https" {
